@@ -1,117 +1,103 @@
 // components/Footer.tsx
 import React from "react";
-import {
-  Ship,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { Instagram, Twitter, Youtube } from "lucide-react";
+import logofooter from "../public/logofooter.png";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <Ship className="h-8 w-8 text-red-600" />
-              <span className="text-xl font-bold">Zhonghae</span>
+    <footer className="bg-[#1A1718] text-white py-20 rounded-t-3xl">
+      <div className="container mx-auto px-4">
+        {/* 중앙 로고 이미지 */}
+        <div className="flex justify-center mb-16">
+          <img
+            src={logofooter}
+            alt="중해천공공해외창 로고"
+            className="h-auto w-[440px]"
+          />
+        </div>
+
+        {/* 푸터 하단 부분 - 4개 열로 배치 */}
+        <div className="flex flex-col md:flex-row justify-between max-w-5xl mx-auto">
+          {/* 왼쪽 회사 정보 */}
+          <div className="mb-8 md:mb-0">
+            <h3 className="text-lg font-medium mb-2">중해천공공해외창</h3>
+            <p className="text-gray-400 mb-4">email@email.com</p>
+            <div className="flex space-x-3">
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Youtube size={20} />
+              </a>
             </div>
-            <p className="text-gray-400">
-              Your trusted partner in Korea-China e-commerce logistics
-              solutions.
-            </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#services" className="text-gray-400 hover:text-white">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" className="text-gray-400 hover:text-white">
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-gray-400 hover:text-white">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-400 hover:text-white">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* 오른쪽 메뉴 그룹 */}
+          <div className="flex space-x-12 md:space-x-20">
+            {/* SUPPORT */}
+            <div>
+              <h3 className="text-lg font-medium mb-3">SUPPORT</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    menu1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    menu2
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <Phone size={16} className="text-red-600" />
-                <span className="text-gray-400">+82 2 1234 5678</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Mail size={16} className="text-red-600" />
-                <span className="text-gray-400">contact@zhonghae.com</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <MapPin size={16} className="text-red-600" />
-                <span className="text-gray-400">Incheon, South Korea</span>
-              </li>
-            </ul>
-          </div>
+            {/* NAVIGATION */}
+            <div>
+              <h3 className="text-lg font-medium mb-3">NAVIGATION</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    menu1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    menu2
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    menu3
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Social Media */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Facebook size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Twitter size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Instagram size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Linkedin size={24} />
-              </a>
+            {/* Terms */}
+            <div>
+              <h3 className="text-lg font-medium mb-3">Terms</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    개인정보처리방침
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-400 hover:text-white">
+                    이용약관
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2025 Zhonghae Logistics. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm">
-                Cookie Policy
-              </a>
-            </div>
-          </div>
+        {/* 저작권 표시 - 가운데 정렬에서 왼쪽 정렬로 수정 */}
+        <div className="mt-16 text-gray-500 text-sm">
+          <p>© 2024 중해천공공해외창. All rights reserved.</p>
         </div>
       </div>
     </footer>
