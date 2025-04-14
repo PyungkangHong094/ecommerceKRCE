@@ -16,14 +16,18 @@ function App() {
 
       {/* Main Content */}
       <main className="flex-grow">
-        {/* Hero Section with black background */}
+        {/* Hero Section with custom gradient background */}
         <Hero />
 
         {/* Core Services Section */}
-        <Services />
+        <div>
+          <Services />
+        </div>
 
         {/* Visual Portfolio Section */}
-        <Portfolio />
+        <div className="py-8 bg-white">
+          <Portfolio />
+        </div>
 
         {/* Performance Metrics Section */}
         <Metrics />
