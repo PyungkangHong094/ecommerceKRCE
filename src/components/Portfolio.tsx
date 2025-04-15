@@ -25,7 +25,7 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className="bg-white py-8 md:py-16">
-      <div className="w-full max-w-[1792px] mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-4 md:px-0">
         {/* 그라데이션 카드 - 반응형으로 조정 */}
         <div
           className="bg-[#1A0000] rounded-2xl md:rounded-[40px] p-4 md:p-8 lg:p-16 w-full mx-auto overflow-hidden"

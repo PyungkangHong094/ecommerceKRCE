@@ -44,7 +44,7 @@ const Metrics: React.FC = () => {
 
   return (
     <section id="metrics" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2">
         <h2 className="text-center text-3xl font-bold mb-12 text-black">
           믿고 맡길 수 있는 파트너십
         </h2>

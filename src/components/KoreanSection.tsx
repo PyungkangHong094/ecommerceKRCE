@@ -6,7 +6,7 @@ const KoreanSection: React.FC = () => {
   return (
     <section className="w-full bg-white py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-full mx-auto bg-gradient-to-r from-[#100707] via-[#C50001] to-[#100707] rounded-[50px] shadow-xl overflow-hidden">
+        <div className="max-w-10xl mx-auto bg-gradient-to-r from-[#100707] via-[#C50001] to-[#100707] rounded-[50px] shadow-xl overflow-hidden">
           <div className="p-12 md:p-16 flex flex-col md:flex-row items-center justify-between">
             {/* 왼쪽 텍스트 부분 */}
             <div className="md:w-1/2 mb-8 md:mb-0">

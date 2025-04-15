@@ -5,7 +5,7 @@ import firstPageImage from "../public/firstpage.png";
 const Hero: React.FC = () => {
   return (
     <section className="relative bg-white py-8 md:py-16">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-4 md:px-0">
         {/* Rounded container with dark background - using striped pattern border */}
         <div className="rounded-[40px] overflow-hidden bg-gray-900 border-8 border-blue-900/20 bg-[linear-gradient(45deg,rgba(0,0,0,.9),rgba(70,0,0,.9))] shadow-lg mx-auto relative">
           {/* Content container with proper padding */}
