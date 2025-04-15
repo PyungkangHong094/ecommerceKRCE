@@ -7,12 +7,18 @@ import services2 from "../public/services2.png";
 import services3 from "../public/services3.png";
 import services4 from "../public/services4.png";
 import services5 from "../public/services5.png";
+import backgroundImage from "../public/backgroundcricle.jpg";
 
 const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-16 bg-gradient-to-r from-red-50 to-red-100"
+      className="py-16"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <div className="container mx-auto px-4 max-w-5xl">
         {/* 상단 제목 섹션 */}
@@ -36,17 +42,19 @@ const Services: React.FC = () => {
             className="bg-[#C50001] rounded-xl overflow-hidden relative"
             style={{ width: "565.6px", height: "426.67px", flexShrink: 0 }}
           >
-            <div className="p-4 text-white">
+            <div className="p-4 text-white absolute top-0 left-0 z-10">
               <h3 className="text-xl font-bold">수출입 신고 지원</h3>
               <p className="text-base">
                 한국-중국 전자신고 안비 (0710/9810 등)
               </p>
             </div>
-            <img
-              src={services1}
-              alt="수출입 신고 지원 - 트럭 이미지"
-              className="w-full h-auto"
-            />
+            <div className="absolute inset-0">
+              <img
+                src={services1}
+                alt="수출입 신고 지원 - 트럭 이미지"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
           {/* 두 번째 카드 - 362.4px x 426.67px */}
@@ -54,16 +62,18 @@ const Services: React.FC = () => {
             className="bg-[#C50001] rounded-xl overflow-hidden relative"
             style={{ width: "362.4px", height: "426.67px", flexShrink: 0 }}
           >
-            <div className="p-4 text-white">
+            <div className="p-4 text-white absolute top-0 left-0 z-10">
               <h3 className="text-xl font-bold">산동성 1호 해외창고</h3>
               <p className="text-base">중국 정부도 인정한</p>
               <p className="text-base">공식 파트너</p>
             </div>
-            <img
-              src={services2}
-              alt="산동성 해외창고"
-              className="w-full h-auto"
-            />
+            <div className="absolute inset-0">
+              <img
+                src={services2}
+                alt="산동성 해외창고"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
 
@@ -74,16 +84,18 @@ const Services: React.FC = () => {
             className="bg-[#C50001] rounded-xl overflow-hidden relative"
             style={{ width: "362.4px", height: "426.67px", flexShrink: 0 }}
           >
-            <div className="p-4 text-white">
+            <div className="p-4 text-white absolute top-0 left-0 z-10">
               <h3 className="text-xl font-bold">해상 · 항공 국제운송</h3>
               <p className="text-base">인천-위해 주 5회</p>
               <p className="text-base">항공급 속도의 해운</p>
             </div>
-            <img
-              src={services3}
-              alt="해상 및 항공 운송"
-              className="w-full h-auto"
-            />
+            <div className="absolute inset-0">
+              <img
+                src={services3}
+                alt="해상 및 항공 운송"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
           {/* 네 번째 카드 - 565.6px x 426.67px */}
@@ -91,15 +103,17 @@ const Services: React.FC = () => {
             className="bg-[#C50001] rounded-xl overflow-hidden relative"
             style={{ width: "565.6px", height: "426.67px", flexShrink: 0 }}
           >
-            <div className="p-4 text-white">
+            <div className="p-4 text-white absolute top-0 left-0 z-10">
               <h3 className="text-xl font-bold">글로벌 파트너</h3>
               <p className="text-base">실시간 연동으로 자동 출고 가능</p>
             </div>
-            <img
-              src={services4}
-              alt="글로벌 파트너 - 물류 트럭"
-              className="w-full h-auto"
-            />
+            <div className="absolute inset-0">
+              <img
+                src={services4}
+                alt="글로벌 파트너 - 물류 트럭"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
 
@@ -109,15 +123,17 @@ const Services: React.FC = () => {
             className="bg-[#C50001] rounded-xl overflow-hidden relative"
             style={{ width: "960px", height: "426.67px" }}
           >
-            <div className="p-4 text-white">
+            <div className="p-4 text-white absolute top-0 left-0 z-10">
               <h3 className="text-xl font-bold">풀필먼트 & 창고 보관</h3>
               <p className="text-base">WMS 기반 무서류 자동화 시스템</p>
             </div>
-            <img
-              src={services5}
-              alt="컨테이너와 창고 이미지"
-              className="absolute left-0 bottom-0 w-auto h-[340px]"
-            />
+            <div className="absolute inset-0">
+              <img
+                src={services5}
+                alt="컨테이너와 창고 이미지"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
