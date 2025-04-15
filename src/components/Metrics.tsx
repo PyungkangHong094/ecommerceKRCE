@@ -1,49 +1,74 @@
 // components/Metrics.tsx
 import React from "react";
-import { Building2, Timer, Users, CheckCircle2 } from "lucide-react";
 
 interface MetricItem {
-  icon: React.ReactNode;
+  title: string;
   value: string;
-  label: string;
 }
 
-const metrics: MetricItem[] = [
-  {
-    icon: <Building2 size={40} />,
-    value: "50,000m²",
-    label: "Warehouse Space",
-  },
-  {
-    icon: <Timer size={40} />,
-    value: "24/7",
-    label: "Operations",
-  },
-  {
-    icon: <Users size={40} />,
-    value: "1000+",
-    label: "Active Clients",
-  },
-  {
-    icon: <CheckCircle2 size={40} />,
-    value: "99.9%",
-    label: "Delivery Success",
-  },
-];
-
 const Metrics: React.FC = () => {
+  const metrics: MetricItem[] = [
+    {
+      title: "창고 면적",
+      value: "5,000m²",
+    },
+    {
+      title: "일 처리 물량",
+      value: "10,000건",
+    },
+    {
+      title: "누적 수출입 신고",
+      value: "30만건",
+    },
+    {
+      title: "연동 플랫폼",
+      value: "60+",
+    },
+    {
+      title: "재이용률",
+      value: "92%",
+    },
+    {
+      title: "자동 출고 정확도",
+      value: "99.7%",
+    },
+    {
+      title: "주문 후 평균",
+      value: "3시간 이내 출고",
+    },
+    {
+      title: "전문 인력 배치",
+      value: "평균 7년 경력",
+    },
+  ];
+
   return (
-    <section id="about" className="py-20 bg-red-600 text-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          Partners You Can Trust
+    <section id="metrics" className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-center text-3xl font-bold mb-12 text-black">
+          믿고 맡길 수 있는 파트너십
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {metrics.map((metric, index) => (
-            <div key={index} className="text-center p-6 bg-red-700 rounded-lg">
-              <div className="text-white mb-4">{metric.icon}</div>
-              <div className="text-4xl font-bold mb-2">{metric.value}</div>
-              <div className="text-lg">{metric.label}</div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {metrics.slice(0, 4).map((metric, index) => (
+            <div
+              key={index}
+              className="bg-[#C50001] text-white text-center p-6 rounded-xl flex flex-col justify-center items-center"
+            >
+              <p className="text-lg font-medium mb-1">{metric.title}</p>
+              <p className="text-2xl md:text-3xl font-bold">{metric.value}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+          {metrics.slice(4, 8).map((metric, index) => (
+            <div
+              key={index}
+              className="bg-[#C50001] text-white text-center p-6 rounded-xl flex flex-col justify-center items-center"
+            >
+              <p className="text-lg font-medium mb-1">{metric.title}</p>
+              <p className="text-2xl md:text-3xl font-bold">{metric.value}</p>
             </div>
           ))}
         </div>
