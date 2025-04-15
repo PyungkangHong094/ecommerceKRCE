@@ -20,7 +20,7 @@ function App() {
         <Hero />
 
         {/* Core Services Section */}
-        <div className="py-8 bg-gray-100">
+        <div>
           <Services />
         </div>
 

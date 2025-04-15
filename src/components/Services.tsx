@@ -1,6 +1,13 @@
 // components/Services.tsx
 import React from "react";
 
+// 이미지를 직접 import (Vite/React에서 권장하는 방식)
+import services1 from "../public/services1.png";
+import services2 from "../public/services2.png";
+import services3 from "../public/services3.png";
+import services4 from "../public/services4.png";
+import services5 from "../public/services5.png";
+
 const Services: React.FC = () => {
   return (
     <section
@@ -22,10 +29,13 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        {/* 서비스 그리드 - 2-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {/* 수출입 신고 지원 */}
-          <div className="bg-[#C50001] rounded-xl overflow-hidden relative">
+        {/* 첫 번째 행: 다른 크기의 두 카드 나란히 배치 */}
+        <div className="flex flex-col md:flex-row gap-6 mb-6">
+          {/* 첫 번째 카드 - 565.6px x 426.67px */}
+          <div
+            className="bg-[#C50001] rounded-xl overflow-hidden relative"
+            style={{ width: "565.6px", height: "426.67px", flexShrink: 0 }}
+          >
             <div className="p-4 text-white">
               <h3 className="text-xl font-bold">수출입 신고 지원</h3>
               <p className="text-base">
@@ -33,48 +43,60 @@ const Services: React.FC = () => {
               </p>
             </div>
             <img
-              src="/api/placeholder/450/250"
+              src={services1}
               alt="수출입 신고 지원 - 트럭 이미지"
               className="w-full h-auto"
             />
           </div>
 
-          {/* 산동성 1호 해외창고 */}
-          <div className="bg-[#C50001] rounded-xl overflow-hidden relative">
+          {/* 두 번째 카드 - 362.4px x 426.67px */}
+          <div
+            className="bg-[#C50001] rounded-xl overflow-hidden relative"
+            style={{ width: "362.4px", height: "426.67px", flexShrink: 0 }}
+          >
             <div className="p-4 text-white">
               <h3 className="text-xl font-bold">산동성 1호 해외창고</h3>
               <p className="text-base">중국 정부도 인정한</p>
               <p className="text-base">공식 파트너</p>
             </div>
             <img
-              src="/api/placeholder/450/250"
+              src={services2}
               alt="산동성 해외창고"
               className="w-full h-auto"
             />
           </div>
+        </div>
 
-          {/* 해상 · 항공 국제운송 */}
-          <div className="bg-[#C50001] rounded-xl overflow-hidden relative">
+        {/* 두 번째 행: 다른 크기의 두 카드 나란히 배치 */}
+        <div className="flex flex-col md:flex-row gap-6 mb-6">
+          {/* 세 번째 카드 - 362.4px x 426.67px */}
+          <div
+            className="bg-[#C50001] rounded-xl overflow-hidden relative"
+            style={{ width: "362.4px", height: "426.67px", flexShrink: 0 }}
+          >
             <div className="p-4 text-white">
               <h3 className="text-xl font-bold">해상 · 항공 국제운송</h3>
               <p className="text-base">인천-위해 주 5회</p>
               <p className="text-base">항공급 속도의 해운</p>
             </div>
             <img
-              src="/api/placeholder/450/250"
+              src={services3}
               alt="해상 및 항공 운송"
               className="w-full h-auto"
             />
           </div>
 
-          {/* 글로벌 파트너 */}
-          <div className="bg-[#C50001] rounded-xl overflow-hidden relative">
+          {/* 네 번째 카드 - 565.6px x 426.67px */}
+          <div
+            className="bg-[#C50001] rounded-xl overflow-hidden relative"
+            style={{ width: "565.6px", height: "426.67px", flexShrink: 0 }}
+          >
             <div className="p-4 text-white">
               <h3 className="text-xl font-bold">글로벌 파트너</h3>
               <p className="text-base">실시간 연동으로 자동 출고 가능</p>
             </div>
             <img
-              src="/api/placeholder/450/250"
+              src={services4}
               alt="글로벌 파트너 - 물류 트럭"
               className="w-full h-auto"
             />
@@ -83,18 +105,19 @@ const Services: React.FC = () => {
 
         {/* 하단 전체 너비 서비스 항목 */}
         <div>
-          <div className="bg-[#C50001] rounded-xl overflow-hidden">
+          <div
+            className="bg-[#C50001] rounded-xl overflow-hidden relative"
+            style={{ width: "960px", height: "426.67px" }}
+          >
             <div className="p-4 text-white">
               <h3 className="text-xl font-bold">풀필먼트 & 창고 보관</h3>
               <p className="text-base">WMS 기반 무서류 자동화 시스템</p>
             </div>
-            <div>
-              <img
-                src="/api/placeholder/900/350"
-                alt="컨테이너와 창고 이미지"
-                className="w-full h-auto"
-              />
-            </div>
+            <img
+              src={services5}
+              alt="컨테이너와 창고 이미지"
+              className="absolute left-0 bottom-0 w-auto h-[340px]"
+            />
           </div>
         </div>
       </div>
