@@ -1,4 +1,4 @@
-// App.tsx
+// App.tsx (현재 형태)
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -16,11 +16,11 @@ function App() {
 
       {/* Main Content */}
       <main className="flex-grow">
-        {/* Hero Section with custom gradient background */}
+        {/* Hero Section with white background */}
         <Hero />
 
         {/* Core Services Section */}
-        <div>
+        <div className="py-8 bg-gray-100">
           <Services />
         </div>
 
